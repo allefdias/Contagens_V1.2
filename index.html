@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Coletar Dados por Setor</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="./index.js" defer=""></script>
+    <script type="text/javascript" src="./index.js" defer=""></script>
+    <link rel="stylesheet" href="./index.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Gerador de Relatório</h1>
+      <p><strong>📅 Data:</strong> <span id="dataHoje"></span></p>
+
+      <div id="setoresContainer"></div>
+
+      <button onclick="adicionarSetor()">+ Adicionar Setor</button>
+      <br><br>
+      <button class="gerar" onclick="gerarRelatorio()">📄 Gerar Relatório</button>
+
+      <!-- 🔽 Lista de sugestões para nome do setor -->
+      <datalist id="setoresList">
+        <option value="RM HOSPITAL"></option>
+        <option value="TC HOSPITAL"></option>
+        <option value="USG HOSPITAL"></option>
+        <option value="RM ANEXO"></option>
+        <option value="TC ANEXO"></option>
+        <option value="USG ANEXO"></option>
+      </datalist>
+
+      <!-- 🔽 Lista de nomes usados (autocomplete) -->
+      <datalist id="nomesSalvosList"></datalist>
+
+      <div id="relatorio" class="output"></div>
+      <br>
+      <button onclick="copiarRelatorio()" id="btnCopiar" style="display: none;">📋 Copiar Relatório</button>
+    </div>
+
+
+
+  </body>
+
+</html>
